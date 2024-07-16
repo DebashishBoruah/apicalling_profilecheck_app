@@ -8,7 +8,7 @@ class ProfileView extends StatelessWidget {
       required this.name,
       required this.phoneNumber,
       required this.email});
-  final image;
+  final dynamic image;
   final String name;
   final String phoneNumber;
   final String email;
@@ -17,7 +17,7 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Profile view"),
+          title: const Text("Profile view"),
         ),
         body: Padding(
           padding: const EdgeInsets.only(left:20,right: 20),
@@ -52,7 +52,7 @@ class ProfileView extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
               )),
                       onPressed: () async {
-                        Uri uri = Uri.parse('tel:${phoneNumber}');
+                     
                       },
                       child: Column(
                          crossAxisAlignment: CrossAxisAlignment.center,
